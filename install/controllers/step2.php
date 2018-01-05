@@ -85,7 +85,7 @@ class Step2 extends CI_Controller
             $this->errors[] = 'File uploads need to be enabled in your PHP configuration.';
         }
 
-        if ( ! extension_loaded('mysql'))
+        if ( (! extension_loaded('mysql')) || (! extension_loaded('mysqli')) )
         {
             $this->errors[] = 'The PHP MySQL extension is required.';
         }
