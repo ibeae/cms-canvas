@@ -62,7 +62,7 @@
         <tbody>
             <tr>
                 <td>MySQL/ MYSQLi:</td>
-                <td class="align_center"><?php echo extension_loaded('mysql') ? 'On' : 'Off'; ?></td>
+                <td class="align_center"><?php echo (extension_loaded('mysql') || extension_loaded('mysqli')) ? 'On' : 'Off'; ?></td>
                 <td class="align_center">On</td>
                 <td class="align_center"><img src="<?php echo base_url() . 'assets/images/' . ((extension_loaded('mysql')) ? 'good' : 'bad'); ?>.png" /></td>
             </tr>
